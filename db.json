@@ -1,0 +1,79 @@
+{
+  "projects": [
+    {
+      "id": "4",
+      "name": "Projeto 1",
+      "budget": 12000,
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 6000,
+      "services": [
+        {
+          "name": "Contratar um Dev PHP",
+          "cost": "1000",
+          "description": "Vai Desenvolver um sistema de comentários",
+          "id": "f0aadf25-79de-4b03-be47-817fb4361f53"
+        },
+        {
+          "name": "Contratar um Front JR",
+          "cost": "5000",
+          "description": "ter um assistente na squad",
+          "id": "64bbd47c-2e80-4be3-bbf3-ab4828fe075c"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Criar automação",
+      "budget": 14000,
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "6",
+      "name": "Esteira AWS",
+      "budget": "11000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "7",
+      "name": "Sistema de CRM",
+      "budget": "12000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento"
+    }
+  ]
+}
