@@ -1,3 +1,4 @@
+import API_URL from '../../config'; // ajustar o caminho relativo
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Message from './layout/Message';
@@ -26,7 +27,8 @@ function Projects() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch('http://localhost:5000/projects', {
+      fetch(`${API_URL}/projects`, {
+
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -42,7 +44,7 @@ function Projects() {
   }, []);
 
   function removeProject(id) {
-    fetch(`http://localhost:5000/projects/${id}`, {
+     fetch(`${API_URL}/projects/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

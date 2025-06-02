@@ -1,3 +1,5 @@
+import API_URL from '../../config'; // ajustar o caminho relativo
+
 import { useState, useEffect } from 'react'
 import Input from '../form/Input'
 import Select from '../form/Select'
@@ -10,7 +12,8 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:5000/categories', {
+    fetch(`${API_URL}/categories`, {
+
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

@@ -1,3 +1,6 @@
+import API_URL from '../../config'; // ajustar o caminho relativo
+
+
 import { v4 as uuidv4 } from 'uuid';
 import styles from './Project.module.css';
 import { useParams } from 'react-router-dom';
@@ -20,7 +23,7 @@ function Project() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`http://localhost:5000/projects/${id}`, {
+      fetch(`${API_URL}/projects/${id}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -55,7 +58,7 @@ function Project() {
       return false;
     }
 
-    fetch(`http://localhost:5000/projects/${project.id}`, {
+    fetch(`${API_URL}/projects/${project.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -93,7 +96,7 @@ function Project() {
 
     project.cost = newCost;
 
-    fetch(`http://localhost:5000/projects/${project.id}`, {
+    fetch(`${API_URL}/projects/${project.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -119,7 +122,7 @@ function Project() {
     projectUpdated.services = servicesUpdated;
     projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
 
-    fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+    fetch(`${API_URL}/projects/${project.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
